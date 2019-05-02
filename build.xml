@@ -3,10 +3,14 @@
     <property file="build.properties"/>  
 	
 	<target name="df14"> 	
-	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce" 
-		 classpath="${sfdcJarFile}"/>
+	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+        <classpath>
+            <pathelement location="ant-salesforce.jar" />        	
+        </classpath>
+    </taskdef>
 				
 		<echo message="${sf.username}"/> 
+    <mkdir dir="retrieveOutput"/>
 		<sf:retrieve 
 			     username="${sf.username}" 
 			     password="${sf.password}" 
@@ -16,8 +20,11 @@
 	</target>  
 	
 	<target name="deploy">
-	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce" 
-		 classpath="${sfdcJarFile}"/>
+	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+        <classpath>
+            <pathelement location="ant-salesforce.jar" />        	
+        </classpath>
+    </taskdef>
 				
 		<sf:deploy 
 			   username="${sf1.username}" 
