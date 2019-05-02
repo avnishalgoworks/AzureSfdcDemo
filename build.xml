@@ -6,13 +6,13 @@
 	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce" 
 		 classpath="${sfdcJarFile}"/>
 				
-		<echo message="${sfdc.cb.df14.username}"/> 
+		<echo message="${sf.username}"/> 
 		<sf:retrieve 
-			     username="${sfdc.cb.df14.username}" 
-			     password="${sfdc.cb.df14.password}" 
-			     serverurl="${sfPRO.serverurl}" 
-			     retrieveTarget="${sfdc.cb.df14.retrieveTarget}" 
-			     unpackaged="${sfdc.cb.df14.unpackaged}" /> 
+			     username="${sf.username}" 
+			     password="${sf.password}" 
+			     serverurl="${sf.serverurl}" 
+			     retrieveTarget="${sf.retrieveTarget}" 
+			     unpackaged="${sf.unpackaged}" /> 
 	</target>  
 	
 	<target name="deploy">
@@ -20,9 +20,9 @@
 		 classpath="${sfdcJarFile}"/>
 				
 		<sf:deploy 
-			   username="${sfdc.cb.df15.username}" 
-			   password="${sfdc.cb.df15.password}" 
-			   serverurl="${sfPRO.serverurl}" 
+			   username="${sf1.username}" 
+			   password="${sf1.password}" 
+			   serverurl="${sf1.serverurl}" 
 			   deployRoot="src" 
 			   maxPoll="1000" 
 			   testLevel="NoTestRun" 
