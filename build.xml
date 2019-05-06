@@ -45,8 +45,7 @@
 	</taskdef>
        <sf:deploy username="${sf1.username}" password="${sf1.password}"
         serverurl="${sf1.serverurl}"
-        maxPoll="${sf1.maxPoll}" deployRoot="src" testLevel="RunLocalTests"
-        checkOnly="true"/>
+        maxPoll="${sf1.maxPoll}" deployRoot="src" testLevel="RunLocalTests"/>
 </target>
 	
 </project>
