@@ -37,5 +37,15 @@
 			   pollWaitMillis="10000" 
 			   rollbackOnError="true"/>
 	</target> 
+	<target name="deployTest">
+	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+        <classpath>
+            <pathelement location="ant-salesforce.jar" />        	
+        </classpath>
+       <sf:deploy username="${sf1.username}" password="${sf1.password}"
+        serverurl="${sf1.serverurl}"
+        maxPoll="${sf1.maxPoll}" deployRoot="src" testLevel="RunAllTestsInOrg"
+        checkOnly="true"/>
+</target>
 	
 </project>
