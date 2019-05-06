@@ -13,11 +13,6 @@ steps:
 # Ant
 - task: Ant@1
   inputs:
-    antBuildFile: 'build.xml'
-    options: 
-    targets: 'deployTest'
-- task: Ant@1
-  inputs:
     workingDirectory: ''
     buildFile: 'build.xml'
     javaHomeOption: 'JDKVersion'
